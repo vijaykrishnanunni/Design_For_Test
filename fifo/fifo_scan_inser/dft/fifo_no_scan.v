@@ -14,7 +14,7 @@ module asy_fifo #(
 
     output wire full,
     output wire empty
-);
+); 
 
 localparam DEPTH = (1 << ADDR_WIDTH);
 
