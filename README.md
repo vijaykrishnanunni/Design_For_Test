@@ -21,21 +21,42 @@ Target DUTs include combinational and sequential designs, extended to **asynchro
 
 ## Key Components
 
-### 1. Scan Design
+### 1.Scan Design
 
-* Muxed scan flip-flops replacing standard FFs
-* Serial shift capability via scan chain
-* Modes:
-
+* In an industrial full-scan design flow, standard flip-flops are ideally replaced with muxed scan flip-flops.
+* This enables serial shifting of internal states for testing without adding extra functional pipeline stages.
+* Supported modes:
   * Functional mode
   * Scan mode (shift + capture)
 
 **Purpose:**
 
-* Full internal state control and observation
-* Enables high fault coverage via ATPG
+* Improves controllability and observability of internal states
+* Enables high fault coverage using ATPG
 
----
+**Note on this project:**
+
+* Replacing the DUT flip-flops is the better and more correct full-scan approach.
+* However, in this project, a wrapper-based scan architecture is used instead of directly modifying the DUT internals.
+
+**Why scan replacement is better:**
+
+* It is the actual industry-style full-scan method.
+* No extra functional latency is introduced.
+* Internal storage elements become directly controllable and observable for ATPG.
+* It more closely matches real DFT tool flows used in synthesis and test insertion.
+
+**Why a wrapper is used here:**
+
+* The original asynchronous FIFO DUT is kept untouched.
+* This avoids disturbing sensitive dual-clock FIFO behavior, Gray-pointer logic, and CDC synchronizers.
+* It is easier to prototype, debug, and explain in an academic project.
+* It allows demonstration of scan, JTAG access, and test concepts without redesigning the core DUT.
+
+**Why both are mentioned:**
+
+* Scan replacement should be presented as the ideal and industry-accurate approach.
+* The wrapper used here should be presented as the practical implementation chosen for safety, simplicity, and faster validation.
 
 ### 2. TAP Controller (JTAG)
 
