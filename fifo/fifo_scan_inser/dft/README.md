@@ -1,8 +1,8 @@
 
 ##dft/
-├── scan/
-│   ├── scan_ff.v
-│   ├── asy_fifo_scan.v
+#├── scan/
+#│   ├── scan_ff.v
+#│   ├── asy_fifo_scan.v
 │   └── README.md
 ├── lbist/
 │   ├── lfsr16_prpg.v
