@@ -39,10 +39,10 @@ This project implements a **scan-inserted asynchronous FIFO** designed for DFT (
 ### Additional Ports
 
 ```
-input scan_in;
+input scan_en_wr;
 output scan_out;
-input scan_en;
-input test_clk;   // optional (depends on design)
+
+input test_clk; 
 ```
 
 ---
