@@ -8,7 +8,7 @@ module lfsr16_prpg (
     input  wire [15:0] seed,
     output wire        prpg_bit,
     output wire [15:0] prpg_word
-);
+); 
 
     reg [15:0] lfsr_reg;
     wire feedback;
