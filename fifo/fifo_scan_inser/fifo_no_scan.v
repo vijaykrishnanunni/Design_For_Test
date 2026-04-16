@@ -2,7 +2,7 @@ module asy_fifo #(
     parameter DATA_WIDTH = 16,
     parameter ADDR_WIDTH = 4
 )(
-    input  wire wr_clk,
+    input  wire wr_clk, 
     input  wire wr_rst_n,
     input  wire wr_en,
     input  wire [DATA_WIDTH-1:0] wr_data,
