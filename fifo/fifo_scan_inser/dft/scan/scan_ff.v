@@ -4,7 +4,7 @@ module scan_ff (
     input  wire scan_en,
     input  wire si,
     input  wire d,
-    output reg  q,
+    output reg  q, 
     output wire so
 );
 
