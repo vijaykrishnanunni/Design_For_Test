@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module misr #(
+module misr #( 
     parameter WIDTH = 16,
     parameter [WIDTH-1:0] POLY = 16'hB400
 )(
