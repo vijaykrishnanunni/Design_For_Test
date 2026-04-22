@@ -1,4 +1,4 @@
-////////dummy golden reference
+///////dummy golden reference
 `timescale 1ns/1ps
 
 module golden_signature_mem #(
