@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-
+ 
 module lbist_result_block #(
     parameter WIDTH = 16,
     parameter [WIDTH-1:0] GOLDEN_SIG = 16'hA5C3
