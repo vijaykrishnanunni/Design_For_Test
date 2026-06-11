@@ -10,7 +10,7 @@ This module follows the standard JTAG FSM flow and controls instruction register
 
 ```text
 TCK
-TMS
+TMS 
 TDI
 TDO
 ```
