@@ -5,7 +5,7 @@ module tap_controller (
     input  wire tck,
     input  wire trst_n,
     input  wire tms,
-
+ 
     output reg  test_logic_reset,
     output reg  run_test_idle,
 
