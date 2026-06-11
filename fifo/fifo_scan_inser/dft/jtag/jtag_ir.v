@@ -2,7 +2,7 @@
 `timescale 1ns/1ps
 
 module jtag_ir #(
-    parameter IR_WIDTH = 4
+    parameter IR_WIDTH = 4 
 )(
     input  wire                  tck,
     input  wire                  trst_n,
